@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>يوسف وائل | Youssef Wael - Portfolio & CV</title>
+  <meta name="description" content="ملف الأعمال والسيرة الذاتية الرسمية للمهندس يوسف وائل - مهندس برمجيات أول ومطور ويب شامل">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    body {
+      font-family: 'Cairo', 'Outfit', sans-serif;
+      background-color: #0a0b0e;
+      color: #f3f4f6;
+    }
+    html[dir="ltr"] body {
+      font-family: 'Outfit', sans-serif;
+    }
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-indigo-600 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- TOP BAR -->
+  <header class="sticky top-0 z-40 w-full border-b backdrop-blur-md bg-neutral-950/85 border-neutral-800 text-neutral-100 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-8 h-16">
+        <a href="#" class="text-lg font-bold tracking-tight text-white whitespace-nowrap shrink-0 hover:text-indigo-400 transition-colors" id="brand-title">
+          يوسف وائل · ملف الأعمال
+        </a>
+
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-neutral-300">
+          <a href="#about" class="hover:text-white transition-colors whitespace-nowrap hover:underline underline-offset-8" data-i18n="nav_about">عني</a>
+          <a href="#projects" class="hover:text-white transition-colors whitespace-nowrap hover:underline underline-offset-8" data-i18n="nav_projects">المشاريع</a>
+          <a href="#skills" class="hover:text-white transition-colors whitespace-nowrap hover:underline underline-offset-8" data-i18n="nav_skills">المهارات</a>
+          <a href="#experience" class="hover:text-white transition-colors whitespace-nowrap hover:underline underline-offset-8" data-i18n="nav_exp">المسيرة</a>
+          <a href="#contact" class="hover:text-white transition-colors whitespace-nowrap hover:underline underline-offset-8" data-i18n="nav_contact">التواصل</a>
+        </nav>
+
+        <div class="flex items-center gap-3 shrink-0">
+          <button onclick="toggleResumeModal(true)" class="px-3.5 py-1.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm active:scale-95">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <span data-i18n="btn_resume">السيرة الذاتية (CV)</span>
+          </button>
+          
+          <button onclick="toggleLang()" class="px-2.5 py-1 text-xs font-bold text-neutral-300 hover:text-white border border-neutral-700 hover:border-neutral-500 rounded-lg transition-colors uppercase" id="lang-btn">
+            EN
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section id="about" class="relative pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-stretch">
+          
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            <div class="flex items-center gap-2 text-xs font-medium text-neutral-400 mb-4 tracking-wider">
+              <span class="text-indigo-400 font-semibold" data-i18n="hero_kicker">مهندس برمجيات أول</span>
+              <span aria-hidden="true">·</span>
+              <span data-i18n="hero_status">متاح للمشاريع الجديدة والتعاقد</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight mb-6 max-w-2xl" data-i18n="hero_headline">
+              مهندس برمجيات أول ومطور ويب شامل
+            </h1>
+
+            <p class="text-base sm:text-lg text-neutral-300 leading-relaxed mb-8 max-w-2xl" data-i18n="hero_bio">
+              مهندس برمجيات شغوف بخبرة تتجاوز 6 سنوات في هندسة الحلول السحابية وتطوير واجهات المستخدم المتقدمة. متخصص في بناء أنظمة موزعة عالية التوفر، ودمج نماذج الذكاء الاصطناعي، وتحويل الأفكار المعقدة إلى منتجات رقمية أنيقة وعالية الأداء.
+            </p>
+
+            <!-- Metadata Strip -->
+            <div class="flex flex-wrap items-center gap-4 text-xs text-neutral-400 mb-8">
+              <div class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span data-i18n="hero_location">مصر، الجيزة، الهرم</span>
+              </div>
+              <span aria-hidden="true" class="text-neutral-600">·</span>
+              <div class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <a href="tel:01122090654" class="hover:text-emerald-400 transition-colors font-mono">01122090654</a>
+              </div>
+              <span aria-hidden="true" class="text-neutral-600">·</span>
+              <div class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <a href="mailto:yw82229@gmail.com" class="hover:text-indigo-400 transition-colors">yw82229@gmail.com</a>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#projects" class="px-6 py-3 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl transition-all shadow-md active:scale-95 flex items-center gap-2">
+                <span data-i18n="hero_cta1">استعراض المشاريع</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+              <button onclick="toggleResumeModal(true)" class="px-5 py-3 text-sm font-medium text-neutral-200 hover:text-white bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 rounded-xl transition-colors flex items-center gap-2">
+                <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                <span data-i18n="hero_cta2">السيرة الذاتية (CV)</span>
+              </button>
+              <a href="https://www.linkedin.com/in/youssef-wael-30a9a0401/" target="_blank" class="px-4 py-3 text-sm font-medium text-indigo-400 hover:text-indigo-300 underline underline-offset-4">
+                LinkedIn ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Avatar Card -->
+          <div class="lg:col-span-5 flex items-center justify-center">
+            <div class="relative w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-neutral-800 bg-gradient-to-br from-neutral-900 to-neutral-950 p-8 flex flex-col items-center justify-center text-center shadow-2xl">
+              <div class="w-24 h-24 rounded-full bg-indigo-950/80 border-2 border-indigo-500/40 flex items-center justify-center mb-6 text-3xl font-extrabold text-indigo-400 shadow-inner">
+                YW
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-2" id="hero-card-name">يوسف وائل</h3>
+              <p class="text-xs text-indigo-400 font-mono tracking-wider mb-4 uppercase">Senior Full-Stack Engineer</p>
+              <div class="p-3 bg-neutral-950/80 border border-neutral-800 rounded-xl text-xs text-neutral-300 w-full space-y-1.5">
+                <div class="flex justify-between">
+                  <span class="text-neutral-500">Location:</span>
+                  <span class="font-medium">Egypt, Al-Haram</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-neutral-500">Phone:</span>
+                  <span class="font-mono text-emerald-400">01122090654</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-neutral-500">Status:</span>
+                  <span class="text-emerald-400">Available</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Column KPI Row -->
+        <div class="mt-16 pt-10 border-t border-neutral-850 grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div>
+            <span class="text-3xl sm:text-4xl font-extrabold text-white font-mono tabular-nums">+6</span>
+            <span class="text-xs sm:text-sm text-neutral-400 block mt-1" data-i18n="kpi_1">سنوات من الخبرة الهندسية</span>
+          </div>
+          <div>
+            <span class="text-3xl sm:text-4xl font-extrabold text-white font-mono tabular-nums">+38</span>
+            <span class="text-xs sm:text-sm text-neutral-400 block mt-1" data-i18n="kpi_2">مشروعاً ناجحاً تم تسليمه</span>
+          </div>
+          <div>
+            <span class="text-3xl sm:text-4xl font-extrabold text-white font-mono tabular-nums">99.98%</span>
+            <span class="text-xs sm:text-sm text-neutral-400 block mt-1" data-i18n="kpi_3">معدل جاهزية واستقرار الأنظمة</span>
+          </div>
+          <div>
+            <span class="text-3xl sm:text-4xl font-extrabold text-white font-mono tabular-nums">+150k</span>
+            <span class="text-xs sm:text-sm text-neutral-400 block mt-1" data-i18n="kpi_4">مستخدم نشط للمنصات</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED PROJECTS SECTION -->
+    <section id="projects" class="py-20 border-b border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <div class="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-2 font-mono">01. Selected Works</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight" data-i18n="projects_title">
+            أبرز المشاريع الهندسية والحلول المؤسسية
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-indigo-400 uppercase font-mono font-semibold mb-2">AI Platform · 2026</div>
+              <h3 class="text-lg font-bold text-white mb-2" data-i18n="p1_title">منصة آيثر للتحليلات التنبؤية بالذكاء الاصطناعي</h3>
+              <p class="text-xs text-neutral-300 leading-relaxed mb-4" data-i18n="p1_desc">
+                منصة سحابية متقدمة لمراقبة وتحليل تدفقات نماذج الذكاء الاصطناعي والشبكات العصبية مع لوحة تحكم فورية ورسوم بيانية تفاعلية لمعالجة 1.4 تيرابايت يومياً.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-neutral-800 text-[11px] font-mono text-neutral-400">
+              React 19 · TypeScript · FastAPI · Docker
+            </div>
+          </article>
+
+          <article class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-emerald-400 uppercase font-mono font-semibold mb-2">FinTech & Mobile · 2025</div>
+              <h3 class="text-lg font-bold text-white mb-2" data-i18n="p2_title">تطبيق زينيث المالي لإدارة المدفوعات الذكية</h3>
+              <p class="text-xs text-neutral-300 leading-relaxed mb-4" data-i18n="p2_desc">
+                تطبيق مصرفي حديث يقدم تحليلات نفقات ذكية، وتتبع ميزانيات تفاعلي، ومدفوعات فورية مشفرة بمعايير PCI-DSS لأكثر من 85 ألف عملية شهرية.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-neutral-800 text-[11px] font-mono text-neutral-400">
+              React Native · GraphQL · PostgreSQL · Stripe
+            </div>
+          </article>
+
+          <article class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-sky-400 uppercase font-mono font-semibold mb-2">Cloud & Infra · 2025</div>
+              <h3 class="text-lg font-bold text-white mb-2" data-i18n="p3_title">نظام كلاود نكسس للبنية التحتية الموزعة</h3>
+              <p class="text-xs text-neutral-300 leading-relaxed mb-4" data-i18n="p3_desc">
+                نظام أتمتة وإدارة الشبكات السحابية الموزعة ومراكز البيانات العالمية مع موازنة أحمال ذكية واكتشاف تلقائي للأعطال بجاهزية 99.995%.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-neutral-800 text-[11px] font-mono text-neutral-400">
+              Go · Kubernetes · Terraform · gRPC · AWS
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section id="skills" class="py-20 border-b border-neutral-800 bg-neutral-950/50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <div class="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-2 font-mono">02. Capabilities</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight" data-i18n="skills_title">
+            المهارات الهندسية والترسانة التقنية
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
+            <h3 class="text-sm font-bold text-white mb-3 text-indigo-400" data-i18n="sk_cat1">الواجهات وتطوير الويب</h3>
+            <ul class="text-xs text-neutral-300 space-y-2">
+              <li class="flex justify-between"><span>React 19 / Next.js</span><span class="font-mono text-neutral-500">96%</span></li>
+              <li class="flex justify-between"><span>TypeScript</span><span class="font-mono text-neutral-500">95%</span></li>
+              <li class="flex justify-between"><span>Tailwind CSS</span><span class="font-mono text-neutral-500">98%</span></li>
+              <li class="flex justify-between"><span>Core Web Vitals</span><span class="font-mono text-neutral-500">92%</span></li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
+            <h3 class="text-sm font-bold text-white mb-3 text-emerald-400" data-i18n="sk_cat2">الخوادم والأنظمة</h3>
+            <ul class="text-xs text-neutral-300 space-y-2">
+              <li class="flex justify-between"><span>Node.js / Express</span><span class="font-mono text-neutral-500">94%</span></li>
+              <li class="flex justify-between"><span>PostgreSQL & SQL</span><span class="font-mono text-neutral-500">90%</span></li>
+              <li class="flex justify-between"><span>FastAPI / Python</span><span class="font-mono text-neutral-500">88%</span></li>
+              <li class="flex justify-between"><span>Redis Caching</span><span class="font-mono text-neutral-500">86%</span></li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
+            <h3 class="text-sm font-bold text-white mb-3 text-sky-400" data-i18n="sk_cat3">السحابة والعمليات</h3>
+            <ul class="text-xs text-neutral-300 space-y-2">
+              <li class="flex justify-between"><span>Docker Containers</span><span class="font-mono text-neutral-500">92%</span></li>
+              <li class="flex justify-between"><span>Kubernetes (K8s)</span><span class="font-mono text-neutral-500">84%</span></li>
+              <li class="flex justify-between"><span>GCP & AWS Cloud</span><span class="font-mono text-neutral-500">88%</span></li>
+              <li class="flex justify-between"><span>CI/CD Pipelines</span><span class="font-mono text-neutral-500">90%</span></li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
+            <h3 class="text-sm font-bold text-white mb-3 text-amber-400" data-i18n="sk_cat4">الذكاء الاصطناعي والتكامل</h3>
+            <ul class="text-xs text-neutral-300 space-y-2">
+              <li class="flex justify-between"><span>Gemini API & LLMs</span><span class="font-mono text-neutral-500">90%</span></li>
+              <li class="flex justify-between"><span>RAG Architecture</span><span class="font-mono text-neutral-500">86%</span></li>
+              <li class="flex justify-between"><span>REST & GraphQL</span><span class="font-mono text-neutral-500">94%</span></li>
+              <li class="flex justify-between"><span>Data Engineering</span><span class="font-mono text-neutral-500">85%</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK HISTORY -->
+    <section id="experience" class="py-20 border-b border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <div class="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-2 font-mono">03. Journey</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight" data-i18n="exp_title">
+            المسيرة المهنية والتعليم
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="space-y-6">
+            <h3 class="text-base font-bold text-white flex items-center gap-2" data-i18n="exp_sub1">
+              💼 الخبرات العملية
+            </h3>
+            
+            <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800">
+              <div class="flex justify-between items-start mb-1">
+                <h4 class="text-sm font-bold text-white" data-i18n="r1_role">مهندس برمجيات أول ورئيس الفريق التقني</h4>
+                <span class="text-xs font-mono text-neutral-400">2023 - Present</span>
+              </div>
+              <p class="text-xs text-indigo-400 mb-2">Digital Horizon Systems</p>
+              <p class="text-xs text-neutral-300 leading-relaxed" data-i18n="r1_desc">
+                قيادة فريق هندسي لبناء منصات مؤسسية وإعادة هيكلة الواجهات مما سرع الاستجابة بنسبة 52% مع حماية ملايين الطلبات يومياً.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800">
+              <div class="flex justify-between items-start mb-1">
+                <h4 class="text-sm font-bold text-white" data-i18n="r2_role">مطور Full Stack أول</h4>
+                <span class="text-xs font-mono text-neutral-400">2021 - 2023</span>
+              </div>
+              <p class="text-xs text-indigo-400 mb-2">Apex Cloud Innovations</p>
+              <p class="text-xs text-neutral-300 leading-relaxed" data-i18n="r2_desc">
+                بناء لوحات تحكم فورية عبر WebSockets لخدمة 50 ألف مستخدم نشط وأتمتة النشر المستمر للحلول السحابية.
+              </p>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <h3 class="text-base font-bold text-white flex items-center gap-2" data-i18n="exp_sub2">
+              🎓 التعليم والشهادات
+            </h3>
+
+            <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800">
+              <div class="flex justify-between items-start mb-1">
+                <h4 class="text-sm font-bold text-white" data-i18n="edu1_degree">بكالوريوس علوم الحاسب وهندسة البرمجيات</h4>
+                <span class="text-xs font-mono text-neutral-400">2015 - 2019</span>
+              </div>
+              <p class="text-xs text-indigo-400 mb-2" data-i18n="edu1_inst">كلية علوم الحاسب والمعلومات</p>
+              <p class="text-xs text-emerald-400 font-mono" data-i18n="edu1_grade">امتياز مع مرتبة الشرف (First Class Honours)</p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800">
+              <div class="flex justify-between items-start mb-1">
+                <h4 class="text-sm font-bold text-white">Google Cloud Certified Professional Architect</h4>
+                <span class="text-xs font-mono text-neutral-400">2023</span>
+              </div>
+              <p class="text-xs text-indigo-400 mb-2">Google Cloud Platform</p>
+              <p class="text-xs text-neutral-300 leading-relaxed" data-i18n="edu2_desc">
+                شهادة معتمدة في تصميم البنى التحتية السحابية المقاومة للأعطال والتوسع التلقائي.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 border-b border-neutral-800 bg-neutral-950/70">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-12">
+          <div class="text-xs font-semibold text-indigo-400 uppercase tracking-widest mb-2 font-mono">04. Contact</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight" data-i18n="contact_title">
+            تواصل معي لبدء العمل على مشروعك
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div class="p-6 sm:p-8 rounded-2xl bg-neutral-900 border border-neutral-800 space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-xl bg-neutral-950 border border-neutral-800 text-indigo-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <span class="text-xs text-neutral-500 block">البريد الإلكتروني المباشر</span>
+                <a href="mailto:yw82229@gmail.com" class="text-base font-bold text-white hover:text-indigo-400 transition-colors">yw82229@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 pt-4 border-t border-neutral-800">
+              <div class="p-3 rounded-xl bg-neutral-950 border border-neutral-800 text-emerald-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <span class="text-xs text-neutral-500 block">الهاتف والواتساب</span>
+                <a href="tel:01122090654" class="text-base font-bold text-white hover:text-emerald-400 transition-colors font-mono">01122090654</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 pt-4 border-t border-neutral-800">
+              <div class="p-3 rounded-xl bg-neutral-950 border border-neutral-800 text-sky-400">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <span class="text-xs text-neutral-500 block">الموقع الجغرافي</span>
+                <span class="text-base font-bold text-white" data-i18n="c_loc">مصر، الجيزة، الهرم</span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-neutral-800">
+              <a href="https://www.linkedin.com/in/youssef-wael-30a9a0401/" target="_blank" class="block w-full py-3 text-center text-xs font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition-colors">
+                زيارة الملف الشخصي على LinkedIn ↗
+              </a>
+            </div>
+          </div>
+
+          <form onsubmit="handleSend(event)" class="p-6 sm:p-8 rounded-2xl bg-neutral-900 border border-neutral-800 space-y-4">
+            <div>
+              <label class="block text-xs font-medium text-neutral-300 mb-1">الاسم</label>
+              <input type="text" id="contact-name" required class="w-full p-3 rounded-xl bg-neutral-950 border border-neutral-800 text-xs text-white focus:outline-none focus:border-indigo-500" placeholder="اسمك الكريم">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-neutral-300 mb-1">البريد الإلكتروني</label>
+              <input type="email" id="contact-email" required class="w-full p-3 rounded-xl bg-neutral-950 border border-neutral-800 text-xs text-white focus:outline-none focus:border-indigo-500" placeholder="name@domain.com">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-neutral-300 mb-1">الرسالة أو تفاصيل المشروع</label>
+              <textarea id="contact-msg" rows="4" required class="w-full p-3 rounded-xl bg-neutral-950 border border-neutral-800 text-xs text-white focus:outline-none focus:border-indigo-500" placeholder="اكتب رسالتك هنا..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl transition-colors">
+              إرسال الرسالة إلى البريد ✉
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-8 border-t border-neutral-900 bg-neutral-950 text-neutral-500 text-xs text-center no-print">
+    <div class="max-w-7xl mx-auto px-4">
+      <p>© 2026 يوسف وائل (Youssef Wael). جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <!-- RESUME / CV MODAL -->
+  <div id="resume-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-white text-neutral-900 rounded-2xl shadow-2xl p-6 sm:p-10 font-sans">
+      <div class="no-print flex items-center justify-between pb-4 mb-6 border-b border-neutral-200">
+        <span class="text-xs font-bold text-neutral-500 uppercase tracking-wider">السيرة الذاتية الرسمية</span>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-3.5 py-1.5 text-xs font-bold text-white bg-neutral-950 hover:bg-neutral-800 rounded-lg">
+            طباعة / حفظ PDF 🖨
+          </button>
+          <button onclick="toggleResumeModal(false)" class="p-1.5 text-neutral-500 hover:text-black">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <div class="border-b border-neutral-300 pb-4">
+          <h2 class="text-3xl font-extrabold text-neutral-950 mb-1">يوسف وائل | Youssef Wael</h2>
+          <p class="text-sm font-bold text-indigo-700 mb-2">Senior Software Engineer & Full-Stack Architect</p>
+          <div class="flex flex-wrap gap-3 text-xs text-neutral-600">
+            <span>📧 yw82229@gmail.com</span>
+            <span>·</span>
+            <span>📱 01122090654</span>
+            <span>·</span>
+            <span>📍 مصر، الجيزة، الهرم</span>
+            <span>·</span>
+            <a href="https://www.linkedin.com/in/youssef-wael-30a9a0401/" target="_blank" class="text-indigo-600 underline">linkedin.com/in/youssef-wael</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-900 mb-2 border-b border-neutral-200 pb-1">الملخص المهني</h3>
+          <p class="text-xs text-neutral-700 leading-relaxed">
+            مهندس برمجيات شغوف بخبرة تتجاوز 6 سنوات في هندسة الحلول السحابية وتطوير واجهات المستخدم المتقدمة. متخصص في بناء أنظمة موزعة عالية التوفر، ودمج نماذج الذكاء الاصطناعي، وتحويل الأفكار المعقدة إلى منتجات رقمية أنيقة وعالية الأداء.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-900 mb-2 border-b border-neutral-200 pb-1">الخبرات العملية</h3>
+          <div class="space-y-3 text-xs text-neutral-800">
+            <div>
+              <div class="flex justify-between font-bold text-neutral-950">
+                <span>مهندس برمجيات أول ورئيس الفريق التقني - Digital Horizon Systems</span>
+                <span class="font-mono text-neutral-500">2023 - Present</span>
+              </div>
+              <p class="text-neutral-600">قيادة فريق هندسي لبناء منصات مؤسسية وإعادة هيكلة الواجهات مما سرع الاستجابة بنسبة 52%.</p>
+            </div>
+            <div>
+              <div class="flex justify-between font-bold text-neutral-950">
+                <span>مطور Full Stack أول - Apex Cloud Innovations</span>
+                <span class="font-mono text-neutral-500">2021 - 2023</span>
+              </div>
+              <p class="text-neutral-600">بناء لوحات تحكم فورية عبر WebSockets لخدمة 50 ألف مستخدم نشط وأتمتة النشر المستمر.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-900 mb-2 border-b border-neutral-200 pb-1">المهارات التقنية</h3>
+          <p class="text-xs text-neutral-700 leading-relaxed">
+            React 19, Next.js, TypeScript, Node.js, Express, Python, FastAPI, Docker, Kubernetes, PostgreSQL, Redis, Google Cloud Platform (GCP), AWS, CI/CD, Gemini AI Integration.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-neutral-900 mb-2 border-b border-neutral-200 pb-1">التعليم</h3>
+          <div class="flex justify-between text-xs text-neutral-800">
+            <div>
+              <span class="font-bold text-neutral-950">بكالوريوس علوم الحاسب وهندسة البرمجيات</span>
+              <p class="text-neutral-600">كلية علوم الحاسب والمعلومات - امتياز مع مرتبة الشرف</p>
+            </div>
+            <span class="font-mono text-neutral-500">2015 - 2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentLang = 'ar';
+    const translations = {
+      ar: {
+        brand: 'يوسف وائل · ملف الأعمال',
+        name: 'يوسف وائل',
+        nav_about: 'عني',
+        nav_projects: 'المشاريع',
+        nav_skills: 'المهارات',
+        nav_exp: 'المسيرة',
+        nav_contact: 'التواصل',
+        btn_resume: 'السيرة الذاتية (CV)',
+        hero_kicker: 'مهندس برمجيات أول',
+        hero_status: 'متاح للمشاريع الجديدة والتعاقد',
+        hero_headline: 'مهندس برمجيات أول ومطور ويب شامل',
+        hero_bio: 'مهندس برمجيات شغوف بخبرة تتجاوز 6 سنوات في هندسة الحلول السحابية وتطوير واجهات المستخدم المتقدمة. متخصص في بناء أنظمة موزعة عالية التوفر، ودمج نماذج الذكاء الاصطناعي، وتحويل الأفكار المعقدة إلى منتجات رقمية أنيقة وعالية الأداء.',
+        hero_location: 'مصر، الجيزة، الهرم',
+        hero_cta1: 'استعراض المشاريع',
+        hero_cta2: 'السيرة الذاتية (CV)',
+        kpi_1: 'سنوات من الخبرة الهندسية',
+        kpi_2: 'مشروعاً ناجحاً تم تسليمه',
+        kpi_3: 'معدل جاهزية واستقرار الأنظمة',
+        kpi_4: 'مستخدم نشط للمنصات',
+        projects_title: 'أبرز المشاريع الهندسية والحلول المؤسسية',
+        p1_title: 'منصة آيثر للتحليلات التنبؤية بالذكاء الاصطناعي',
+        p1_desc: 'منصة سحابية متقدمة لمراقبة وتحليل تدفقات نماذج الذكاء الاصطناعي والشبكات العصبية مع لوحة تحكم فورية ورسوم بيانية تفاعلية لمعالجة 1.4 تيرابايت يومياً.',
+        p2_title: 'تطبيق زينيث المالي لإدارة المدفوعات الذكية',
+        p2_desc: 'تطبيق مصرفي حديث يقدم تحليلات نفقات ذكية، وتتبع ميزانيات تفاعلي، ومدفوعات فورية مشفرة بمعايير PCI-DSS لأكثر من 85 ألف عملية شهرية.',
+        p3_title: 'نظام كلاود نكسس للبنية التحتية الموزعة',
+        p3_desc: 'نظام أتمتة وإدارة الشبكات السحابية الموزعة ومراكز البيانات العالمية مع موازنة أحمال ذكية واكتشاف تلقائي للأعطال بجاهزية 99.995%.',
+        skills_title: 'المهارات الهندسية والترسانة التقنية',
+        sk_cat1: 'الواجهات وتطوير الويب',
+        sk_cat2: 'الخوادم والأنظمة',
+        sk_cat3: 'السحابة والعمليات',
+        sk_cat4: 'الذكاء الاصطناعي والتكامل',
+        exp_title: 'المسيرة المهنية والتعليم',
+        exp_sub1: '💼 الخبرات العملية',
+        exp_sub2: '🎓 التعليم والشهادات',
+        r1_role: 'مهندس برمجيات أول ورئيس الفريق التقني',
+        r1_desc: 'قيادة فريق هندسي لبناء منصات مؤسسية وإعادة هيكلة الواجهات مما سرع الاستجابة بنسبة 52% مع حماية ملايين الطلبات يومياً.',
+        r2_role: 'مطور Full Stack أول',
+        r2_desc: 'بناء لوحات تحكم فورية عبر WebSockets لخدمة 50 ألف مستخدم نشط وأتمتة النشر المستمر للحلول السحابية.',
+        edu1_degree: 'بكالوريوس علوم الحاسب وهندسة البرمجيات',
+        edu1_inst: 'كلية علوم الحاسب والمعلومات',
+        edu1_grade: 'امتياز مع مرتبة الشرف (First Class Honours)',
+        edu2_desc: 'شهادة معتمدة في تصميم البنى التحتية السحابية المقاومة للأعطال والتوسع التلقائي.',
+        contact_title: 'تواصل معي لبدء العمل على مشروعك',
+        c_loc: 'مصر، الجيزة، الهرم'
+      },
+      en: {
+        brand: 'Youssef Wael · Portfolio',
+        name: 'Youssef Wael',
+        nav_about: 'About',
+        nav_projects: 'Projects',
+        nav_skills: 'Skills',
+        nav_exp: 'Experience',
+        nav_contact: 'Contact',
+        btn_resume: 'Resume / CV',
+        hero_kicker: 'Lead Software Engineer',
+        hero_status: 'Available for New Projects',
+        hero_headline: 'Senior Software Engineer & Full-Stack Architect',
+        hero_bio: 'Passionate software engineer with over 6 years of expertise in architecting cloud-native solutions and responsive web interfaces. Specialized in high-throughput distributed systems, modern AI pipeline integration, and crafting seamless digital products.',
+        hero_location: 'Al-Haram, Giza, Egypt',
+        hero_cta1: 'Explore Projects',
+        hero_cta2: 'Download CV',
+        kpi_1: 'Years of Engineering Experience',
+        kpi_2: 'Production Deliveries',
+        kpi_3: 'System Reliability Rate',
+        kpi_4: 'Active Platform Users',
+        projects_title: 'Production Systems & Case Studies',
+        p1_title: 'Aether Neural: AI Analytics Engine',
+        p1_desc: 'High-performance neural pipeline monitoring dashboard providing real-time inference telemetry, accuracy diagnostics, and latency observability processing 1.4 TB/day.',
+        p2_title: 'Zenith Finance: Next-Gen Mobile Banking',
+        p2_desc: 'Modern mobile banking experience featuring intelligent budget categorization, instantaneous peer transactions, and biometric verification handling 85k monthly transactions.',
+        p3_title: 'Cloud Nexus: Distributed Edge Topology',
+        p3_desc: 'Autonomous distributed cloud orchestration platform featuring intelligent edge load balancing, auto-failover, and multi-region routing across 14 global zones.',
+        skills_title: 'Engineering Capabilities & Tooling',
+        sk_cat1: 'Frontend Engineering',
+        sk_cat2: 'Backend & Systems',
+        sk_cat3: 'Cloud & DevOps',
+        sk_cat4: 'AI & Data Integration',
+        exp_title: 'Work History & Academic Credentials',
+        exp_sub1: '💼 Work Experience',
+        exp_sub2: '🎓 Education & Credentials',
+        r1_role: 'Lead Software Engineer',
+        r1_desc: 'Spearheading engineering squad building mission-critical enterprise platforms, accelerating load speeds by 52% and processing millions of secure requests.',
+        r2_role: 'Senior Full Stack Developer',
+        r2_desc: 'Crafted real-time WebSocket chart rendering pipeline supporting 50k concurrent subscribers and automated cloud continuous integration pipelines.',
+        edu1_degree: 'Bachelor of Science in Computer Science',
+        edu1_inst: 'College of Computer Science & Engineering',
+        edu1_grade: 'First Class Honours',
+        edu2_desc: 'Certified credential in designing resilient, fault-tolerant, and auto-scaling multi-tier cloud environments.',
+        contact_title: 'Let’s Build Something Exceptional',
+        c_loc: 'Al-Haram, Giza, Egypt'
+      }
+    };
+
+    function toggleLang() {
+      currentLang = currentLang === 'ar' ? 'en' : 'ar';
+      document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+      document.documentElement.lang = currentLang;
+      document.getElementById('lang-btn').textContent = currentLang === 'ar' ? 'EN' : 'عربي';
+      document.getElementById('brand-title').textContent = translations[currentLang].brand;
+      document.getElementById('hero-card-name').textContent = translations[currentLang].name;
+      
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang][key]) {
+          el.textContent = translations[currentLang][key];
+        }
+      });
+    }
+
+    function toggleResumeModal(show) {
+      const modal = document.getElementById('resume-modal');
+      if (show) {
+        modal.classList.remove('hidden');
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    function handleSend(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value;
+      const email = document.getElementById('contact-email').value;
+      const msg = document.getElementById('contact-msg').value;
+      const mailto = `mailto:yw82229@gmail.com?subject=Portfolio Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent('From: ' + name + ' (' + email + ')\n\n' + msg)}`;
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
